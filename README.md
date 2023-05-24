@@ -37,3 +37,5 @@ Course content
 6min
 # 27. home screen
 3min
+# 28. allow new sellers to signup and sign in
+16min
