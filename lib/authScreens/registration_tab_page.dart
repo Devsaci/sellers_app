@@ -53,7 +53,8 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
         if (nameTextEditingController.text.isNotEmpty &&
             emailTextEditingController.text.isNotEmpty &&
             passwordTextEditingController.text.isNotEmpty &&
-            confirmPasswordTextEditingController.text.isNotEmpty) {
+            confirmPasswordTextEditingController.text.isNotEmpty &&
+            phoneTextEditingController.text.isNotEmpty) {
           showDialog(
               context: context,
               builder: (c) {
