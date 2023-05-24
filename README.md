@@ -35,3 +35,5 @@ Course content
 5min
 # 26. splash screen
 6min
+# 27. home screen
+3min
