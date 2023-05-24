@@ -21,8 +21,8 @@ class _MyDrawerState extends State<MyDrawer> {
       child: ListView(
         children: [
           //header
-           Padding(
-            padding: const EdgeInsets.only(top: 26, bottom: 12),
+           const Padding(
+            padding: EdgeInsets.only(top: 26, bottom: 12),
             child: Column(
               children: [
                 //user profile image
@@ -31,15 +31,15 @@ class _MyDrawerState extends State<MyDrawer> {
                   width: 130,
                   child: CircleAvatar(
                     backgroundImage: NetworkImage(
-                      sharedPreferences!.getString('photoUrl')!
+                      "sharedPreferences!.getString('photoUrl')!,"
                         ),
                   ),
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12),
                 //user name
                 Text(
-                  sharedPreferences!.getString('name')!,
-                  style: const TextStyle(
+                  "sharedPreferences!.getString('name')!",
+                  style: TextStyle(
                     color: Colors.grey,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

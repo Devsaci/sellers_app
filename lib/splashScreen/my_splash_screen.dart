@@ -18,10 +18,11 @@ class _MySplashScreenState extends State<MySplashScreen> {
   // Timer
   splashScreenTimer() {
     Timer(const Duration(seconds: 3), () {
+      //Navigator.push(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
       //user is already logged-in
-      if(FirebaseAuth.instance.currentUser != null)
+      if(FirebaseAuth.instance.currentUser == null)
       {
-        //Navigator.push(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (c) => const HomeScreen()));
       }
       else //user is NOT already logged-in
       {
