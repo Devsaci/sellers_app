@@ -25,6 +25,7 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
   TextEditingController confirmPasswordTextEditingController =
       TextEditingController();
   TextEditingController phoneTextEditingController = TextEditingController();
+
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   String downloadUrlImage = "";
 
@@ -213,6 +214,14 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
                     iconData: Icons.lock,
                     hintText: "Confirm Password",
                     isObsecre: true,
+                    enabled: true,
+                  ),
+                  //phone
+                  CustomTextField(
+                    textEditingController: phoneTextEditingController,
+                    iconData: Icons.lock,
+                    hintText: "Phone",
+                    isObsecre: false,
                     enabled: true,
                   ),
 
