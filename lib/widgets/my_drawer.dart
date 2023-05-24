@@ -1,6 +1,5 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../global/global.dart';
@@ -21,8 +20,8 @@ class _MyDrawerState extends State<MyDrawer> {
       child: ListView(
         children: [
           //header
-           const Padding(
-            padding: EdgeInsets.only(top: 26, bottom: 12),
+            Padding(
+            padding: const EdgeInsets.only(top: 26, bottom: 12),
             child: Column(
               children: [
                 //user profile image
@@ -31,15 +30,15 @@ class _MyDrawerState extends State<MyDrawer> {
                   width: 130,
                   child: CircleAvatar(
                     backgroundImage: NetworkImage(
-                      "sharedPreferences!.getString('photoUrl')!,"
+                      sharedPreferences!.getString('photoUrl')!
                         ),
                   ),
                 ),
-                SizedBox(height: 12),
+                const SizedBox(height: 12),
                 //user name
                 Text(
-                  "sharedPreferences!.getString('name')!",
-                  style: TextStyle(
+                  sharedPreferences!.getString('name')!,
+                  style: const TextStyle(
                     color: Colors.grey,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
