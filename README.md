@@ -28,3 +28,7 @@ Cloud Firestore is a cloud-hosted, NoSQL database that your iOS, Android, and we
 Course content
 42 sections • 173 lectures • 24h 19m total length
 
+
+# Section 7: Sellers_App Create New Project & Allow new Sellers to SingUP & Sing In
+30min
+# 25. create new project and connect to firebase
