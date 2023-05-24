@@ -34,3 +34,4 @@ Course content
 # 25. create new project and connect to firebase
 5min
 # 26. splash screen
+6min
