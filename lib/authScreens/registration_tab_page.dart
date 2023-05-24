@@ -24,6 +24,7 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
   TextEditingController passwordTextEditingController = TextEditingController();
   TextEditingController confirmPasswordTextEditingController =
       TextEditingController();
+  TextEditingController phoneTextEditingController = TextEditingController();
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   String downloadUrlImage = "";
 
