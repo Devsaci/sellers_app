@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
-      title: 'Amazon Clone User_App',
+      title: 'Amazon Clone Sellers_App',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
         //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
