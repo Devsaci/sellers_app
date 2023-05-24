@@ -126,6 +126,7 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
       "email": currentUser.email,
       "name": nameTextEditingController.text.trim(),
       "photoUrl": downloadUrlImage,
+      "phone": phoneTextEditingController.text.trim(),
       "status": "approved",
       "userCart": ["initialValue"],
     });
