@@ -32,3 +32,4 @@ Course content
 # Section 7: Sellers_App Create New Project & Allow new Sellers to SingUP & Sing In
 30min
 # 25. create new project and connect to firebase
+5min
