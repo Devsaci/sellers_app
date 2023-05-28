@@ -45,3 +45,5 @@ Course content
 6min
 # 31. default screen ui
 6min
+# 32. simple dialog box for image capturing and image selection
+6min
