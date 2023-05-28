@@ -70,7 +70,7 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
 
           fStorage.Reference storageRef = fStorage.FirebaseStorage.instance
               .ref()
-              .child("usersImages")
+              .child("sellersImages")
               .child(fileName);
 
           fStorage.UploadTask uploadImageTask =
