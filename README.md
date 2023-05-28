@@ -39,3 +39,6 @@ Course content
 3min
 # 28. allow new sellers to signup and sign in
 16min
+
+# section 8 : Sellers App - Upload new Brands
+# 30. create the upload brands screen
