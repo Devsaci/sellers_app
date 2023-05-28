@@ -77,7 +77,7 @@ class _LoginTabPageState extends State<LoginTabPage> {
               .setString("photoUrl", record.data()!["photoUrl"]);
           // List<String> userCartList = record.data()!["userCart"].cast<String>();
           // await sharedPreferences!.setStringList("userCart", userCartList);
-          //send user to home screen
+          //send Sellers to home screen
           Navigator.push(
               context, MaterialPageRoute(builder: (c) => MySplashScreen()));
         } else //status is not approved
@@ -92,7 +92,7 @@ class _LoginTabPageState extends State<LoginTabPage> {
       {
         FirebaseAuth.instance.signOut();
         Navigator.pop(context);
-        Fluttertoast.showToast(msg: "This user's record do not exists.");
+        Fluttertoast.showToast(msg: "This Seller's record do not exists.");
       }
     });
   }

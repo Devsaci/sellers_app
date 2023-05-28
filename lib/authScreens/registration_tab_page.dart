@@ -225,7 +225,7 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
                   //phone
                   CustomTextField(
                     textEditingController: phoneTextEditingController,
-                    iconData: Icons.lock,
+                    iconData: Icons.phone,
                     hintText: "Phone",
                     isObsecre: false,
                     enabled: true,
@@ -233,7 +233,7 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
                   //location
                   CustomTextField(
                     textEditingController: locationTextEditingController,
-                    iconData: Icons.lock,
+                    iconData: Icons.location_city,
                     hintText: "Address",
                     isObsecre: false,
                     enabled: true,
