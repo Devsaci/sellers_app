@@ -142,7 +142,7 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
     await sharedPreferences!
         .setString("name", nameTextEditingController.text.trim());
     await sharedPreferences!.setString("photoUrl", downloadUrlImage);
-    await sharedPreferences!.setStringList("userCart", ["initialValue"]);
+    // await sharedPreferences!.setStringList("userCart", ["initialValue"]);
 
     Navigator.push(
         context, MaterialPageRoute(builder: (c) => const MySplashScreen()));
