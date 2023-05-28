@@ -47,6 +47,19 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             tileMode: TileMode.clamp,
           ),
         ),
+        child: Center(
+          child: Column(
+            children: [
+              const Icon(
+                Icons.add_photo_alternate_outlined,
+                color: Colors.white,
+                size: 200,
+              ),
+              ElevatedButton(
+                  onPressed: () {}, child: const Text("Add New Brand")),
+            ],
+          ),
+        ),
       ),
     );
   }
