@@ -75,8 +75,8 @@ class _LoginTabPageState extends State<LoginTabPage> {
           await sharedPreferences!.setString("name", record.data()!["name"]);
           await sharedPreferences!
               .setString("photoUrl", record.data()!["photoUrl"]);
-          List<String> userCartList = record.data()!["userCart"].cast<String>();
-          await sharedPreferences!.setStringList("userCart", userCartList);
+          // List<String> userCartList = record.data()!["userCart"].cast<String>();
+          // await sharedPreferences!.setStringList("userCart", userCartList);
           //send user to home screen
           Navigator.push(
               context, MaterialPageRoute(builder: (c) => MySplashScreen()));
