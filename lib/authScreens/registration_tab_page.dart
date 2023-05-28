@@ -229,6 +229,14 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
                     isObsecre: false,
                     enabled: true,
                   ),
+                  //location
+                  CustomTextField(
+                    textEditingController: locationTextEditingController,
+                    iconData: Icons.lock,
+                    hintText: "Address",
+                    isObsecre: false,
+                    enabled: true,
+                  ),
 
                   const SizedBox(
                     height: 20,
