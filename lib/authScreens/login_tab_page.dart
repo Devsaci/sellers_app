@@ -56,7 +56,7 @@ class _LoginTabPageState extends State<LoginTabPage> {
     });
 
     if (currentUser != null) {
-      checkIfUserRecordExists(currentUser!);
+      checkIfSellerRecordExists(currentUser!);
     }
   }
 
