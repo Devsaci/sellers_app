@@ -60,7 +60,7 @@ class _LoginTabPageState extends State<LoginTabPage> {
     }
   }
 
-  void checkIfUserRecordExists(User currentUser) async {
+  void checkIfSellerRecordExists(User currentUser) async {
     await FirebaseFirestore.instance
         .collection("sellers")
         .doc(currentUser.uid)
