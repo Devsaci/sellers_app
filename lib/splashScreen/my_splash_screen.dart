@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 
 import '../authScreens/auth_screen.dart';
-import '../mainScreens/home_screen.dart';
+import 'package:sellers_app/brandsScreens/home_screen.dart';
 
 class MySplashScreen extends StatefulWidget {
   const MySplashScreen({Key? key}) : super(key: key);
