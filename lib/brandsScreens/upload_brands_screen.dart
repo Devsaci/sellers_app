@@ -17,7 +17,11 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
 
   Scaffold defaultScreen() {
     return Scaffold(
-    appBar: AppBar(),
+    appBar: AppBar(
+      title: const Text(
+          "Add New Brand"
+      ),
+    ),
     body: Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
