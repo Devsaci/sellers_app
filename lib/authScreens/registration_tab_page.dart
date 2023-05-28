@@ -27,7 +27,6 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
   TextEditingController phoneTextEditingController = TextEditingController();
   TextEditingController locationTextEditingController = TextEditingController();
 
-
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   String downloadUrlImage = "";
 
@@ -56,7 +55,8 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
             emailTextEditingController.text.isNotEmpty &&
             passwordTextEditingController.text.isNotEmpty &&
             confirmPasswordTextEditingController.text.isNotEmpty &&
-            phoneTextEditingController.text.isNotEmpty) {
+            phoneTextEditingController.text.isNotEmpty &&
+            locationTextEditingController.text.isNotEmpty) {
           showDialog(
               context: context,
               builder: (c) {
