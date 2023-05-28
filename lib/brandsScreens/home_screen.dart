@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sellers_app/brandsScreens/upload_brands_screen.dart';
 
 import '../widgets/my_drawer.dart';
 
@@ -30,7 +31,9 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (c) => const UploadBrandsScreen(),));
+              },
               icon: const Icon(
                 Icons.abc_rounded,
               ))
