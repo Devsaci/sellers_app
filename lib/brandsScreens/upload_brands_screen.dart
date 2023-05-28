@@ -50,13 +50,16 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
         child: Center(
           child: Column(
             children: [
-              const Icon(
-                Icons.add_photo_alternate_outlined,
-                color: Colors.white,
-                size: 200,
-              ),
+              const Icon(Icons.add_photo_alternate_outlined,
+                  color: Colors.white, size: 200),
               ElevatedButton(
-                  onPressed: () {}, child: const Text("Add New Brand")),
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepPurple,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30))),
+                child: const Text("Add New Brand"),
+              ),
             ],
           ),
         ),
