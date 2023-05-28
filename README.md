@@ -42,3 +42,6 @@ Course content
 
 # section 8 : Sellers App - Upload new Brands
 # 30. create the upload brands screen
+6min
+# 31. default screen ui
+6min
