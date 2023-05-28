@@ -123,7 +123,7 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
 
   saveInfoToFirestoreAndLocally(User currentUser) async {
     //save to firestore
-    FirebaseFirestore.instance.collection("users").doc(currentUser.uid).set({
+    FirebaseFirestore.instance.collection("sellers").doc(currentUser.uid).set({
       "uid": currentUser.uid,
       "email": currentUser.email,
       "name": nameTextEditingController.text.trim(),
