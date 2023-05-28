@@ -131,7 +131,7 @@ class _RegistrationTabPageState extends State<RegistrationTabPage> {
       "phone": phoneTextEditingController.text.trim(),
       "address": locationTextEditingController.text.trim(),
       "status": "approved",
-      "userCart": ["initialValue"],
+      // "userCart": ["initialValue"],
     });
 
     //save locally
