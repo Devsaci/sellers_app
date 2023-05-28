@@ -49,6 +49,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
         ),
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Icon(Icons.add_photo_alternate_outlined,
                   color: Colors.white, size: 200),
