@@ -18,7 +18,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return defaultScreen();
+    return  imgXFile == null ?   defaultScreen() : uploadFormScreen();
   }
 
   Scaffold defaultScreen() {
