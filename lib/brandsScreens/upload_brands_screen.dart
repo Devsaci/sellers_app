@@ -1,4 +1,4 @@
-import 'dart:ui';
+
 
 import 'package:flutter/material.dart';
 
@@ -70,9 +70,12 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
     );
   }
 
-  obtainImageDialogBox()
-  {
-
+  obtainImageDialogBox() {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return const SimpleDialog();
+      },
+    );
   }
-
 }
