@@ -78,7 +78,10 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             style: TextStyle(
                 color: Colors.deepPurple, fontWeight: FontWeight.bold),
           ),
-          children: [],
+          children: [
+            //"Capture image with Camera"
+            SimpleDialog(),
+          ],
         );
       },
     );
