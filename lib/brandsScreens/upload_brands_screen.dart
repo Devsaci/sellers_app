@@ -113,5 +113,6 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
   }
 
   getImageFromGallery() async {
+    imgXFile = await imagePicker.pickImage(source: ImageSource.gallery);
   }
 }
