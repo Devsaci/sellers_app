@@ -158,7 +158,9 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
                   style: TextStyle(color: Colors.grey)),
             ),
             SimpleDialogOption(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
               child: const Text(
                 "Cancel",
                 style: TextStyle(
@@ -173,6 +175,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
   }
 
   getImageFromGallery() async {
+    Navigator.pop(context);
     imgXFile = await imagePicker.pickImage(source: ImageSource.gallery);
     setState(() {
       imgXFile;
@@ -180,6 +183,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
   }
 
   captureImageWithPhoneCamera() async {
+    Navigator.pop(context);
     imgXFile = await imagePicker.pickImage(source: ImageSource.camera);
     setState(() {
       imgXFile;
