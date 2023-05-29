@@ -12,6 +12,10 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
   XFile? imgXFile;
   final ImagePicker imagePicker = ImagePicker();
 
+  uploadFormScreen(){
+    return const Scaffold();
+  }
+
   @override
   Widget build(BuildContext context) {
     return defaultScreen();
@@ -121,7 +125,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
     });
   }
   captureImageWithPhoneCamera() async {
-    imgXFile = await imagePicker.pickImage(source: ImageSource.gallery);
+    imgXFile = await imagePicker.pickImage(source: ImageSource.camera);
     setState(() {
       imgXFile;
     });
