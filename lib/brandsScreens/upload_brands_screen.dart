@@ -41,6 +41,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
         title: const Text("Upload New Brand"),
         centerTitle: true,
       ),
+      body: ListView(children: []),
     );
   }
 
