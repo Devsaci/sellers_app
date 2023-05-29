@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class UploadBrandsScreen extends StatefulWidget {
@@ -74,7 +72,13 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
     return showDialog(
       context: context,
       builder: (context) {
-        return const SimpleDialog();
+        return const SimpleDialog(
+          title: Text(
+            "Brand Image",
+            style: TextStyle(
+                color: Colors.deepPurple, fontWeight: FontWeight.bold),
+          ),
+        );
       },
     );
   }
