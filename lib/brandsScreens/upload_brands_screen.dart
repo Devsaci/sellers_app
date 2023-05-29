@@ -19,7 +19,8 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (c)=> const MySplashScreen()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (c) => const MySplashScreen()));
           },
           icon: const Icon(
             Icons.arrow_back_rounded,
@@ -41,7 +42,11 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
         title: const Text("Upload New Brand"),
         centerTitle: true,
       ),
-      body: ListView(children: []),
+      body: ListView(
+        children: [
+          Container(height: 230,width: MediaQuery.of(context).size.width * 0.5,)
+        ],
+      ),
     );
   }
 
