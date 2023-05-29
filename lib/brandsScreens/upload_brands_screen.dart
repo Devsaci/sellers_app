@@ -118,4 +118,10 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       imgXFile;
     });
   }
+  captureImageWithPhoneCamera() async {
+    imgXFile = await imagePicker.pickImage(source: ImageSource.gallery);
+    setState(() {
+      imgXFile;
+    });
+  }
 }
