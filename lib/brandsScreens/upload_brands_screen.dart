@@ -72,7 +72,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
     return showDialog(
       context: context,
       builder: (context) {
-        return  SimpleDialog(
+        return SimpleDialog(
           title: const Text(
             "Brand Image",
             style: TextStyle(
@@ -82,6 +82,8 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             //"Capture image with Camera"
             SimpleDialogOption(
               onPressed: () {},
+              child: const Text("Capture image with Camera",
+                  style: TextStyle(color: Colors.grey)),
             ),
           ],
         );
