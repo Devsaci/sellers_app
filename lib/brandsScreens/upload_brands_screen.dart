@@ -91,6 +91,15 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
               child: const Text("Select image from Gallery",
                   style: TextStyle(color: Colors.grey)),
             ),
+            SimpleDialogOption(
+              onPressed: () {},
+              child: const Text(
+                "Cancel",
+                style: TextStyle(
+                  color: Colors.red,
+                ),
+              ),
+            ),
           ],
         );
       },
