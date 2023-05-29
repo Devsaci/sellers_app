@@ -9,7 +9,10 @@ class UploadBrandsScreen extends StatefulWidget {
 }
 
 class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
+  XFile? imgXFile;
   final ImagePicker imagePicker = ImagePicker();
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -107,5 +110,8 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
         );
       },
     );
+  }
+
+  getImageFromGallery() async {
   }
 }
