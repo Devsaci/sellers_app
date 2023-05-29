@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -44,7 +46,16 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       ),
       body: ListView(
         children: [
-          Container(height: 230,width: MediaQuery.of(context).size.width * 0.5,)
+          SizedBox(
+              height: 230,
+              width: MediaQuery.of(context).size.width * 0.8,
+              child: Center(
+                  child: AspectRatio(
+                      aspectRatio: 16 / 9,
+                      child: Container(
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: FileImage(File(imgXFile!.path))))))))
         ],
       ),
     );
