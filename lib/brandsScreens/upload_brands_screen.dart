@@ -12,22 +12,28 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
   XFile? imgXFile;
   final ImagePicker imagePicker = ImagePicker();
 
-  uploadFormScreen(){
-    return  Scaffold(
+  uploadFormScreen() {
+    return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.arrow_back_rounded,
+          ),
+        ),
         flexibleSpace: Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Colors.deepPurpleAccent.shade200,
-                  Colors.amber.shade900,
-                ],
-                begin: const FractionalOffset(0.0, 0.0),
-                end: const FractionalOffset(1.0, 0.0),
-                stops: const [0.0, 1.0],
-                tileMode: TileMode.clamp,
-              ),
-            )),
+          gradient: LinearGradient(
+            colors: [
+              Colors.deepPurpleAccent.shade200,
+              Colors.amber.shade900,
+            ],
+            begin: const FractionalOffset(0.0, 0.0),
+            end: const FractionalOffset(1.0, 0.0),
+            stops: const [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        )),
         title: const Text("Upload New Brand"),
         centerTitle: true,
       ),
@@ -36,7 +42,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return  imgXFile == null ?   defaultScreen() : uploadFormScreen();
+    return imgXFile == null ? defaultScreen() : uploadFormScreen();
   }
 
   Scaffold defaultScreen() {
@@ -142,6 +148,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       imgXFile;
     });
   }
+
   captureImageWithPhoneCamera() async {
     imgXFile = await imagePicker.pickImage(source: ImageSource.camera);
     setState(() {
