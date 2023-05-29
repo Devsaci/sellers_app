@@ -80,7 +80,9 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
           ),
           children: [
             //"Capture image with Camera"
-            SimpleDialog(),
+            SimpleDialogOption(
+
+            ),
           ],
         );
       },
