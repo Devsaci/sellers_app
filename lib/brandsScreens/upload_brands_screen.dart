@@ -12,8 +12,6 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
   XFile? imgXFile;
   final ImagePicker imagePicker = ImagePicker();
 
-
-
   @override
   Widget build(BuildContext context) {
     return defaultScreen();
@@ -114,5 +112,8 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
 
   getImageFromGallery() async {
     imgXFile = await imagePicker.pickImage(source: ImageSource.gallery);
+    setState(() {
+      imgXFile;
+    });
   }
 }
