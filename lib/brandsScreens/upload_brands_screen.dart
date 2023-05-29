@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class UploadBrandsScreen extends StatefulWidget {
   const UploadBrandsScreen({Key? key}) : super(key: key);
@@ -8,6 +9,8 @@ class UploadBrandsScreen extends StatefulWidget {
 }
 
 class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
+  final ImagePicker imagePicker = ImagePicker();
+
   @override
   Widget build(BuildContext context) {
     return defaultScreen();
