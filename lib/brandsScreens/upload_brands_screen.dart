@@ -78,6 +78,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             style: TextStyle(
                 color: Colors.deepPurple, fontWeight: FontWeight.bold),
           ),
+          children: [],
         );
       },
     );
