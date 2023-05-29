@@ -47,3 +47,5 @@ Course content
 6min
 # 32. simple dialog box for image capturing and image selection
 6min
+# 34. new brand upload form screen ui
+17min
