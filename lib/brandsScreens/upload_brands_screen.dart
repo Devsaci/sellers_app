@@ -67,4 +67,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       ),
     );
   }
+
+  obtainImageDialogBox(){}
+
 }
