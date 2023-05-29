@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../splashScreen/my_splash_screen.dart';
+
 class UploadBrandsScreen extends StatefulWidget {
   const UploadBrandsScreen({Key? key}) : super(key: key);
 
@@ -16,7 +18,9 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (c)=> const MySplashScreen()));
+          },
           icon: const Icon(
             Icons.arrow_back_rounded,
           ),
