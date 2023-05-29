@@ -28,7 +28,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
                 tileMode: TileMode.clamp,
               ),
             )),
-        title: const Text("Add New Brand"),
+        title: const Text("Upload New Brand"),
         centerTitle: true,
       ),
     );
