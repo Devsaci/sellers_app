@@ -54,7 +54,9 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
               const Icon(Icons.add_photo_alternate_outlined,
                   color: Colors.white, size: 200),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  obtainImageDialogBox();
+                },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.deepPurple,
                     shape: RoundedRectangleBorder(
@@ -68,6 +70,9 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
     );
   }
 
-  obtainImageDialogBox(){}
+  obtainImageDialogBox()
+  {
+
+  }
 
 }
