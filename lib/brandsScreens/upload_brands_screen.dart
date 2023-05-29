@@ -46,16 +46,25 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       ),
       body: ListView(
         children: [
+          //image
           SizedBox(
-              height: 230,
-              width: MediaQuery.of(context).size.width * 0.8,
-              child: Center(
-                  child: AspectRatio(
-                      aspectRatio: 16 / 9,
-                      child: Container(
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: FileImage(File(imgXFile!.path))))))))
+            height: 230,
+            width: MediaQuery.of(context).size.width * 0.8,
+            child: Center(
+              child: AspectRatio(
+                aspectRatio: 16 / 9,
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: FileImage(
+                        File(imgXFile!.path),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
