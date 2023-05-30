@@ -73,6 +73,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
               Icons.perm_device_information,
               color: Colors.deepPurple,
             ),
+            title: SizedBox(child: TextField(),),
           ),
           //brand info
         ],
