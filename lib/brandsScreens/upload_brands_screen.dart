@@ -48,6 +48,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
         )),
         title: const Text("Upload New Brand"),
         centerTitle: true,
+        actions: [],
       ),
       body: ListView(
         children: [
@@ -111,7 +112,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
           ),
           const Divider(
             color: Colors.pinkAccent,
-            thickness: 1,
+            thickness: 3,
           ),
         ],
       ),
