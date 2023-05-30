@@ -68,6 +68,13 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             color: Colors.pinkAccent,
             thickness: 3,
           ),
+          const ListTile(
+            leading: Icon(
+              Icons.perm_device_information,
+              color: Colors.deepPurple,
+            ),
+          ),
+          //brand info
         ],
       ),
     );
