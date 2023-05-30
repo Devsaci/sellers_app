@@ -52,13 +52,12 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             width: MediaQuery.of(context).size.width * 0.8,
             child: Center(
               child: AspectRatio(
-                aspectRatio: 16 / 9,
+                aspectRatio: 24 / 16,
                 child: Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: FileImage(
-                        File(imgXFile!.path),
-                      ),
+                      fit: BoxFit.fill,
+                      image: FileImage(File(imgXFile!.path)),
                     ),
                   ),
                 ),
