@@ -64,6 +64,10 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
               ),
             ),
           ),
+          const Divider(
+            color: Colors.pinkAccent,
+            thickness: 3,
+          ),
         ],
       ),
     );
