@@ -15,7 +15,8 @@ class UploadBrandsScreen extends StatefulWidget {
 class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
   TextEditingController brandInfoTextEditingController =
       TextEditingController();
-  TextEditingController brandTitleTextEditingController = TextEditingController();
+  TextEditingController brandTitleTextEditingController =
+      TextEditingController();
 
   XFile? imgXFile;
   final ImagePicker imagePicker = ImagePicker();
@@ -92,7 +93,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             color: Colors.pinkAccent,
             thickness: 3,
           ),
-            //brand title
+          //brand title
           ListTile(
             leading: const Icon(
               Icons.title,
@@ -102,13 +103,16 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
               child: TextField(
                 controller: brandTitleTextEditingController,
                 decoration: const InputDecoration(
-                hintText: "brand title",
+                    hintText: "brand title",
                     hintStyle: TextStyle(color: Colors.grey),
                     border: InputBorder.none),
               ),
             ),
           ),
-
+          const Divider(
+            color: Colors.pinkAccent,
+            thickness: 1,
+          ),
         ],
       ),
     );
