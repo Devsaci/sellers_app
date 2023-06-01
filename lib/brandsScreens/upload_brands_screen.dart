@@ -6,6 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:sellers_app/widgets/progress_bar.dart';
 
 import '../splashScreen/my_splash_screen.dart';
+import 'package:firebase_storage/firebase_storage.dart' as fStorage;
 
 class UploadBrandsScreen extends StatefulWidget {
   const UploadBrandsScreen({Key? key}) : super(key: key);
@@ -35,6 +36,10 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
         });
         //1. upload image to storage - get downloadUrl
         String fileName = DateTime.now().millisecondsSinceEpoch.toString();
+        fStorage.Reference storageRef = fStorage.FirebaseStorage.instance
+            .ref()
+            .child("sellersBrandsImages").child(fileName);
+
       } else {
         Fluttertoast.showToast(msg: "Please write brand info and brand title.");
       }
