@@ -24,7 +24,11 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
 
   void validateUploadForm() {
     if (imgXFile != null) {
-
+      if (brandInfoTextEditingController.text.isNotEmpty &&
+          brandTitleTextEditingController.text.isNotEmpty)
+      {
+        //1. upload image to storage - get downloadUrl
+      }
     } else {
       Fluttertoast.showToast(msg: "Please choose image.");
     }
