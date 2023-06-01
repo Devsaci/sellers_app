@@ -34,6 +34,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
           uploading = true;
         });
         //1. upload image to storage - get downloadUrl
+        String fileName = DateTime.now().millisecondsSinceEpoch.toString();
       } else {
         Fluttertoast.showToast(msg: "Please write brand info and brand title.");
       }
