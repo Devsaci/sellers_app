@@ -22,15 +22,18 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
   XFile? imgXFile;
   final ImagePicker imagePicker = ImagePicker();
 
+  bool uploading = false;
+
   void validateUploadForm() {
     if (imgXFile != null) {
       if (brandInfoTextEditingController.text.isNotEmpty &&
-          brandTitleTextEditingController.text.isNotEmpty)
-      {
+          brandTitleTextEditingController.text.isNotEmpty) {
+
+        setState(() {
+          uploading == true;
+        });
         //1. upload image to storage - get downloadUrl
-      }
-      else
-      {
+      } else {
         Fluttertoast.showToast(msg: "Please write brand info and brand title.");
       }
     } else {
@@ -71,7 +74,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             child: IconButton(
               onPressed: () {
                 //validate upload form
-                validateUploadForm();
+                uploading == true ? null : validateUploadForm();
               },
               icon: const Icon(Icons.cloud_upload),
             ),
