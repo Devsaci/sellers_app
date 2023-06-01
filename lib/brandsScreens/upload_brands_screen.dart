@@ -47,6 +47,8 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
         await taskSnapshot.ref.getDownloadURL().then((urlImage) {
           downloadUrlImage = urlImage;
         });
+        //2. save brand info to firestore database
+
       } else {
         Fluttertoast.showToast(msg: "Please write brand info and brand title.");
       }
