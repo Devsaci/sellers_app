@@ -52,7 +52,9 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
           Padding(
             padding: const EdgeInsets.all(4.0),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                validateUploadForm();
+              },
               icon: const Icon(Icons.cloud_upload),
             ),
           ),
@@ -246,4 +248,6 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       imgXFile;
     });
   }
+
+  void validateUploadForm() {}
 }
