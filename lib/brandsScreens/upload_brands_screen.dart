@@ -27,6 +27,8 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
   bool uploading = false;
   String downloadUrlImage = "";
 
+  void saveBrandInfo() {}
+
   Future<void> validateUploadForm() async {
     if (imgXFile != null) {
       if (brandInfoTextEditingController.text.isNotEmpty &&
@@ -48,7 +50,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
           downloadUrlImage = urlImage;
         });
         //2. save brand info to firestore database
-
+        saveBrandInfo();
       } else {
         Fluttertoast.showToast(msg: "Please write brand info and brand title.");
       }
@@ -294,4 +296,6 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       imgXFile;
     });
   }
+
+  void saveBrandInfo() {}
 }
