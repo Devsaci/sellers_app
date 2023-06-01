@@ -1,10 +1,12 @@
 import 'dart:io';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:sellers_app/widgets/progress_bar.dart';
 
+import '../global/global.dart';
 import '../splashScreen/my_splash_screen.dart';
 import 'package:firebase_storage/firebase_storage.dart' as fStorage;
 
@@ -26,8 +28,24 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
 
   bool uploading = false;
   String downloadUrlImage = "";
+  String brandUniqueId = DateTime.now().millisecondsSinceEpoch.toString();
 
-  void saveBrandInfo() {}
+  void saveBrandInfo() {
+    FirebaseFirestore.instance
+        .collection("sellers")
+        .doc(sharedPreferences!.getString("uid"))
+        .collection("brands")
+        .doc(brandUniqueId)
+        .set({
+      "brandID": brandUniqueId,
+      "sellerUID": sharedPreferences!.getString("uid"),
+      "brandInfo": brandInfoTextEditingController.text.trim(),
+      "brandTitle": brandTitleTextEditingController.text.trim(),
+      "publishedDate": DateTime.now(),
+      "status": "available",
+      "thumbnailUrl": downloadUrlImage,
+    });
+  }
 
   Future<void> validateUploadForm() async {
     if (imgXFile != null) {
@@ -296,6 +314,4 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       imgXFile;
     });
   }
-
-  void saveBrandInfo() {}
 }
