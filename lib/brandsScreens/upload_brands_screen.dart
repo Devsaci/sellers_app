@@ -26,7 +26,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
 
   bool uploading = false;
 
-  void validateUploadForm() {
+  Future<void> validateUploadForm() async {
     if (imgXFile != null) {
       if (brandInfoTextEditingController.text.isNotEmpty &&
           brandTitleTextEditingController.text.isNotEmpty) {
@@ -40,6 +40,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             .ref()
             .child("sellersBrandsImages").child(fileName);
         fStorage.UploadTask uploadImageTask = storageRef.putFile(File(imgXFile!.path));
+        fStorage.TaskSnapshot taskSnapshot = await uploadImageTask.whenComplete(() {});
 
       } else {
         Fluttertoast.showToast(msg: "Please write brand info and brand title.");
