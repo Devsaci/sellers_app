@@ -31,7 +31,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
           brandTitleTextEditingController.text.isNotEmpty) {
 
         setState(() {
-          uploading == true;
+          uploading = true;
         });
         //1. upload image to storage - get downloadUrl
       } else {
@@ -84,7 +84,9 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       ),
       body: ListView(
         children: [
-          uploading == true ? linearProgressBar() : Container(),
+          //const SizedBox(height: 10,),
+          uploading == true ? linearProgressBar() : Container(color: Colors.deepOrange,),
+          const SizedBox(height: 14,),
           //image
           SizedBox(
             height: 230,
@@ -147,6 +149,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             color: Colors.pinkAccent,
             thickness: 3,
           ),
+
         ],
       ),
     );
