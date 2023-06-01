@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../splashScreen/my_splash_screen.dart';
@@ -20,6 +21,14 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
 
   XFile? imgXFile;
   final ImagePicker imagePicker = ImagePicker();
+
+  void validateUploadForm() {
+    if (imgXFile != null) {
+
+    } else {
+      Fluttertoast.showToast(msg: "Please choose image.");
+    }
+  }
 
   uploadFormScreen() {
     return Scaffold(
@@ -53,6 +62,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             padding: const EdgeInsets.all(4.0),
             child: IconButton(
               onPressed: () {
+                //validate upload form
                 validateUploadForm();
               },
               icon: const Icon(Icons.cloud_upload),
@@ -248,6 +258,4 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       imgXFile;
     });
   }
-
-  void validateUploadForm() {}
 }
