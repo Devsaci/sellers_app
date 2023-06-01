@@ -29,6 +29,10 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       {
         //1. upload image to storage - get downloadUrl
       }
+      else
+      {
+        Fluttertoast.showToast(msg: "Please write brand info and brand title.");
+      }
     } else {
       Fluttertoast.showToast(msg: "Please choose image.");
     }
