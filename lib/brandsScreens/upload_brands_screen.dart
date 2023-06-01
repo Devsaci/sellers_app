@@ -25,6 +25,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
   final ImagePicker imagePicker = ImagePicker();
 
   bool uploading = false;
+  String downloadUrlImage = "";
 
   Future<void> validateUploadForm() async {
     if (imgXFile != null) {
@@ -43,7 +44,9 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             storageRef.putFile(File(imgXFile!.path));
         fStorage.TaskSnapshot taskSnapshot =
             await uploadImageTask.whenComplete(() {});
-        await taskSnapshot.ref.getDownloadURL().then((urlImage) {});
+        await taskSnapshot.ref.getDownloadURL().then((urlImage) {
+          downloadUrlImage = urlImage;
+        });
       } else {
         Fluttertoast.showToast(msg: "Please write brand info and brand title.");
       }
