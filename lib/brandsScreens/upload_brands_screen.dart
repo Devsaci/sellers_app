@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:sellers_app/widgets/progress_bar.dart';
 
 import '../splashScreen/my_splash_screen.dart';
 
@@ -83,6 +84,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       ),
       body: ListView(
         children: [
+          uploading == true ? linearProgressBar() : Container(),
           //image
           SizedBox(
             height: 230,
