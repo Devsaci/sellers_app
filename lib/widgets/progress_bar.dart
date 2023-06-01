@@ -1,10 +1,14 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 linearProgressBar() {
   return Container(
-    child: const LinearProgressIndicator(
-      valueColor:AlwaysStoppedAnimation(Colors.pinkAccent),
+    alignment: Alignment.center,
+    child: const Padding(
+      padding: EdgeInsets.only(top: 14),
+      child: LinearProgressIndicator(
+        valueColor:AlwaysStoppedAnimation(Colors.pinkAccent),
+      ),
     ),
   );
 }
