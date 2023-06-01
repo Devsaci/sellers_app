@@ -30,7 +30,6 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
     if (imgXFile != null) {
       if (brandInfoTextEditingController.text.isNotEmpty &&
           brandTitleTextEditingController.text.isNotEmpty) {
-
         setState(() {
           uploading = true;
         });
@@ -38,10 +37,13 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
         String fileName = DateTime.now().millisecondsSinceEpoch.toString();
         fStorage.Reference storageRef = fStorage.FirebaseStorage.instance
             .ref()
-            .child("sellersBrandsImages").child(fileName);
-        fStorage.UploadTask uploadImageTask = storageRef.putFile(File(imgXFile!.path));
-        fStorage.TaskSnapshot taskSnapshot = await uploadImageTask.whenComplete(() {});
-
+            .child("sellersBrandsImages")
+            .child(fileName);
+        fStorage.UploadTask uploadImageTask =
+            storageRef.putFile(File(imgXFile!.path));
+        fStorage.TaskSnapshot taskSnapshot =
+            await uploadImageTask.whenComplete(() {});
+        await taskSnapshot.ref.getDownloadURL().then((urlImage) {});
       } else {
         Fluttertoast.showToast(msg: "Please write brand info and brand title.");
       }
@@ -93,8 +95,14 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       body: ListView(
         children: [
           //const SizedBox(height: 10,),
-          uploading == true ? linearProgressBar() : Container(color: Colors.deepOrange,),
-          const SizedBox(height: 14,),
+          uploading == true
+              ? linearProgressBar()
+              : Container(
+                  color: Colors.deepOrange,
+                ),
+          const SizedBox(
+            height: 14,
+          ),
           //image
           SizedBox(
             height: 230,
@@ -157,7 +165,6 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
             color: Colors.pinkAccent,
             thickness: 3,
           ),
-
         ],
       ),
     );
