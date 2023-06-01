@@ -45,6 +45,10 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       "status": "available",
       "thumbnailUrl": downloadUrlImage,
     });
+    setState(() {
+      uploading = false;
+      brandUniqueId = DateTime.now().millisecondsSinceEpoch.toString();
+    });
   }
 
   Future<void> validateUploadForm() async {
