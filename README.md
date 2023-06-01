@@ -49,3 +49,5 @@ Course content
 6min
 # 34. new brand upload form screen ui
 17min
+# 35. form validation and show uploading linear progress bar
+14min
