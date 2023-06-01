@@ -10,6 +10,8 @@ import '../global/global.dart';
 import '../splashScreen/my_splash_screen.dart';
 import 'package:firebase_storage/firebase_storage.dart' as fStorage;
 
+import 'home_screen.dart';
+
 class UploadBrandsScreen extends StatefulWidget {
   const UploadBrandsScreen({Key? key}) : super(key: key);
 
@@ -49,6 +51,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
       uploading = false;
       brandUniqueId = DateTime.now().millisecondsSinceEpoch.toString();
     });
+    Navigator.push(context, MaterialPageRoute(builder: (c)=> const HomeScreen()));
   }
 
   Future<void> validateUploadForm() async {
