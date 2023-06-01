@@ -39,6 +39,7 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
         fStorage.Reference storageRef = fStorage.FirebaseStorage.instance
             .ref()
             .child("sellersBrandsImages").child(fileName);
+        fStorage.UploadTask uploadImageTask = storageRef.putFile(File(imgXFile!.path));
 
       } else {
         Fluttertoast.showToast(msg: "Please write brand info and brand title.");
