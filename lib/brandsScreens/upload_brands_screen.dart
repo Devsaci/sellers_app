@@ -49,9 +49,12 @@ class _UploadBrandsScreenStateState extends State<UploadBrandsScreen> {
         title: const Text("Upload New Brand"),
         centerTitle: true,
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.cloud_upload),
+          Padding(
+            padding: const EdgeInsets.all(4.0),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.cloud_upload),
+            ),
           ),
         ],
       ),
