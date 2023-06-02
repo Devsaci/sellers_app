@@ -18,4 +18,6 @@ class Brands {
     this.status,
     this.thumbnailUrl,
   });
+
+  Brands.fromJson(Map<String,dynamic> json){}
 }
