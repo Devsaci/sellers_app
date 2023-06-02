@@ -59,3 +59,5 @@ Course content
 11min
 # 39. brands model class
 9min
+# 40. implementing brands ui design widget
+8min
