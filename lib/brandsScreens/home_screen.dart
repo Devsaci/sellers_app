@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
         slivers: [
           SliverPersistentHeader(
             pinned: true,
-            delegate:TextDelegateHeaderWidget(),
+            delegate:TextDelegateHeaderWidget(title: ("My Brand")),
           ),
         ],
       ),
