@@ -4,6 +4,7 @@ import '../models/brands.dart';
 
 class BrandsUiDesignWidget extends StatefulWidget {
   Brands? model;
+  BuildContext? context;
 
   @override
   State<BrandsUiDesignWidget> createState() => _BrandsUiDesignWidgetState();
