@@ -6,4 +6,5 @@ class Brands {
   String? brandTitle;
   Timestamp? publishedDate;
   String? sellerUID;
+  String? status;
 }
