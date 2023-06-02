@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../models/brands.dart';
+
 class BrandsUiDesignWidget extends StatefulWidget {
-  const BrandsUiDesignWidget({Key? key}) : super(key: key);
+  Brands? model;
 
   @override
   State<BrandsUiDesignWidget> createState() => _BrandsUiDesignWidgetState();
