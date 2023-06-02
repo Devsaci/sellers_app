@@ -25,5 +25,6 @@ class Brands {
     brandTitle = json["brandTitle"];
     publishedDate = json["publishedDate"];
     sellerUID = json["sellerUID"];
+    status = json["status"];
   }
 }
