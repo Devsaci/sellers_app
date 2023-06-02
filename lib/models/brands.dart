@@ -22,6 +22,7 @@ class Brands {
   Brands.fromJson(Map<String,dynamic> json){
     brandID = json["brandID"];
     brandInfo = json["brandInfo"];
+    brandTitle = json["brandTitle"];
 
   }
 }
