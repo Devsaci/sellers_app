@@ -1,1 +1,3 @@
-class Brands {}
+class Brands {
+  String? brandID;
+}
