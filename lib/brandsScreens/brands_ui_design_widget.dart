@@ -6,6 +6,9 @@ class BrandsUiDesignWidget extends StatefulWidget {
   Brands? model;
   BuildContext? context;
 
+
+  BrandsUiDesignWidget(this.model, this.context, {super.key});
+
   @override
   State<BrandsUiDesignWidget> createState() => _BrandsUiDesignWidgetState();
 }
