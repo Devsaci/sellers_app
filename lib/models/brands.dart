@@ -23,6 +23,7 @@ class Brands {
     brandID = json["brandID"];
     brandInfo = json["brandInfo"];
     brandTitle = json["brandTitle"];
+    publishedDate = json["publishedDate"];
 
   }
 }
