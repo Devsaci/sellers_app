@@ -57,3 +57,5 @@ Course content
 # section 9 : Sellers App - Retrieve & display seller 's brand on sellers Home Screen
 # 38. implement Sliver Persistent Header widget
 11min
+# 39. brands model class
+9min
