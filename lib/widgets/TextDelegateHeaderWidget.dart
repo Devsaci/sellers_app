@@ -6,7 +6,9 @@ class TextDelegateHeaderWidget extends SliverPersistentHeaderDelegate {
 
   @override
   Widget build(BuildContext context, double shrinkOffSet, bool overlapsContent,) {
-    return const Placeholder();
+    return InkWell(
+      child: Container(),
+    );
   }
 
   @override
