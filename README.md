@@ -53,3 +53,7 @@ Course content
 14min
 # 36. upload new brand and save brand info to firestore database
 12min
+
+# section 9 : Sellers App - Retrieve & display seller 's brand on sellers Home Screen
+# 38. implement Sliver Persistent Header widget
+11min
