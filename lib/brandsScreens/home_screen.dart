@@ -39,6 +39,8 @@ class HomeScreen extends StatelessWidget {
               ))
         ],
       ),
+      body: const CustomScrollView(slivers: []),
+
     );
   }
 }
