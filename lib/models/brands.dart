@@ -19,5 +19,7 @@ class Brands {
     this.thumbnailUrl,
   });
 
-  Brands.fromJson(Map<String,dynamic> json){}
+  Brands.fromJson(Map<String,dynamic> json){
+    json["brandID"];
+  }
 }
