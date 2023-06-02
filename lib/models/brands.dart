@@ -7,4 +7,5 @@ class Brands {
   Timestamp? publishedDate;
   String? sellerUID;
   String? status;
+  String? thumbnailUrl;
 }
