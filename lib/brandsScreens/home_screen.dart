@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:sellers_app/brandsScreens/upload_brands_screen.dart';
@@ -25,9 +24,9 @@ class HomeScreen extends StatelessWidget {
                   Colors.amber.shade300,
                   Colors.amber.shade800,
                 ],
-                begin: FractionalOffset(0.0, 0.0),
-                end: FractionalOffset(1.0, 0.0),
-                stops: [0.0, 1.0],
+                begin: const FractionalOffset(0.0, 0.0),
+                end: const FractionalOffset(1.0, 0.0),
+                stops: const [0.0, 1.0],
                 tileMode: TileMode.clamp,
               )),
         ),
