@@ -61,3 +61,5 @@ Course content
 9min
 # 40. implementing brands ui design widget
 8min
+# 41. write query and display brands on seller home screen
+17min
