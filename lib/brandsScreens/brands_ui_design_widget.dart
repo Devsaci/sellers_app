@@ -15,7 +15,7 @@ class BrandsUiDesignWidget extends StatefulWidget {
 class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
   @override
   Widget build(BuildContext context) {
-    return  Card(
+    return Card(
       elevation: 10,
       shadowColor: Colors.black,
       child: Padding(
@@ -23,7 +23,15 @@ class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
         child: SizedBox(
           height: 270,
           width: MediaQuery.of(context).size.width,
-          child: Column(),
+          child: Column(
+            children: [
+              Image.network(
+                widget.model!.thumbnailUrl.toString(),
+                height: 220,
+                fit: BoxFit.cover,
+              )
+            ],
+          ),
         ),
       ),
     );
