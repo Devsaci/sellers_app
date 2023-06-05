@@ -16,6 +16,9 @@ class BrandsUiDesignWidget extends StatefulWidget {
 class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Card(
+      elevation: 10,
+      shadowColor: Colors.black,
+    );
   }
 }
