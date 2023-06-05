@@ -31,7 +31,17 @@ class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
                 fit: BoxFit.cover,
               ),
               const SizedBox(height: 1),
-              Row(children: [],)
+              Row(children: [
+                Text(
+                  widget.model!.brandTitle.toString(),
+                  style: const TextStyle(
+                    color: Colors.deepPurple,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    letterSpacing: 3,
+                  ),
+                ),
+              ],)
             ],
           ),
         ),
