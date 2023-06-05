@@ -29,7 +29,9 @@ class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
                 widget.model!.thumbnailUrl.toString(),
                 height: 220,
                 fit: BoxFit.cover,
-              )
+              ),
+              const SizedBox(height: 1),
+              Row(children: [],)
             ],
           ),
         ),
