@@ -6,7 +6,6 @@ class BrandsUiDesignWidget extends StatefulWidget {
   Brands? model;
   BuildContext? context;
 
-
   BrandsUiDesignWidget(this.model, this.context, {super.key});
 
   @override
@@ -16,10 +15,17 @@ class BrandsUiDesignWidget extends StatefulWidget {
 class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
   @override
   Widget build(BuildContext context) {
-    return const Card(
+    return  Card(
       elevation: 10,
       shadowColor: Colors.black,
-      child: Padding(padding: EdgeInsets.all(4.0),child: SizedBox(),),
+      child: Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: SizedBox(
+          height: 270,
+          width: MediaQuery.of(context).size.width,
+          child: Column(),
+        ),
+      ),
     );
   }
 }
