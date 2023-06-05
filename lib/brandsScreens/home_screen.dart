@@ -65,7 +65,23 @@ class HomeScreen extends StatelessWidget {
                 .collection("brands")
                 .orderBy("publishedDate", descending: true)
                 .snapshots(),
-            builder: null, // ERROE
+            builder: (context, AsyncSnapshot dataSnapshot)
+            {
+              if(dataSnapshot.hasData) //if brands exists
+              {
+                //display brands
+              }
+              else //if brands NOT exists
+              {
+                return const SliverToBoxAdapter(
+                  child: Center(
+                    child: Text(
+                      "No brands exists",
+                    ),
+                  ),
+                );
+              }
+            },
           )
         ],
       ),
