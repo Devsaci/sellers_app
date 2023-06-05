@@ -19,6 +19,7 @@ class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
     return const Card(
       elevation: 10,
       shadowColor: Colors.black,
+      child: Padding(padding: EdgeInsets.all(4.0),child: SizedBox(),),
     );
   }
 }
