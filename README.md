@@ -63,3 +63,6 @@ Course content
 8min
 # 41. write query and display brands on seller home screen
 17min
+
+# section 10 : Sellers App - Upload new Items
+# 43. create items screen
