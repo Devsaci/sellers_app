@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
+import 'package:sellers_app/models/brands.dart';
 
 class ItemsScreen extends StatefulWidget {
-  const ItemsScreen({Key? key}) : super(key: key);
+  final Brands? model;
+
+  const ItemsScreen({Key? key, this.model}) : super(key: key);
 
   @override
   State<ItemsScreen> createState() => _ItemsScreenState();

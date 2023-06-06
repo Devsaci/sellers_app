@@ -23,7 +23,9 @@ class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (c) => const ItemsScreen()));
+            context, MaterialPageRoute(builder: (c) =>  ItemsScreen(
+          model : widget.model
+        )));
       },
       child: Card(
         elevation: 10,
