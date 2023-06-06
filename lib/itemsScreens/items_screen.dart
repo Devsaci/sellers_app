@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:sellers_app/models/brands.dart';
 
 class ItemsScreen extends StatefulWidget {
@@ -13,6 +14,6 @@ class ItemsScreen extends StatefulWidget {
 class _ItemsScreenState extends State<ItemsScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return AppBar(title: Text(widget.model!.brandTitle.toString()));
   }
 }
