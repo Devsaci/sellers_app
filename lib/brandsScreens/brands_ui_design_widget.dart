@@ -32,6 +32,7 @@ class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
               ),
               const SizedBox(height: 1),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     widget.model!.brandTitle.toString(),
@@ -42,11 +43,16 @@ class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
                       letterSpacing: 3,
                     ),
                   ),
+                  //Spacer(),
                   IconButton(
                     onPressed: () {},
-                    icon: const Icon(
-                      Icons.delete_sweep,
-                      color: Colors.pinkAccent,
+                    icon: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.delete_sweep,
+                        color: Colors.pinkAccent,
+                        size: 50,
+                      ),
                     ),
                   )
                 ],
