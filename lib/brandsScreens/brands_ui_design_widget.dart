@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sellers_app/itemsScreens/items_screen.dart';
 
 import '../models/brands.dart';
 
@@ -20,9 +21,9 @@ class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ()
-      {
-
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (c) => const ItemsScreen()));
       },
       child: Card(
         elevation: 10,
