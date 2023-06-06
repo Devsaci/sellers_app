@@ -6,7 +6,8 @@ class BrandsUiDesignWidget extends StatefulWidget {
   final Brands? model;
   final BuildContext? context;
 
-  const BrandsUiDesignWidget({super.key,
+  const BrandsUiDesignWidget({
+    super.key,
     this.model,
     this.context,
   });
@@ -19,7 +20,10 @@ class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: ()
+      {
+
+      },
       child: Card(
         elevation: 10,
         shadowColor: Colors.black,
