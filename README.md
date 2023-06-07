@@ -66,3 +66,6 @@ Course content
 
 # section 10 : Sellers App - Upload new Items
 # 43. create items screen
+12min
+# 44. allow seller to add new items to selected brand
+33min
