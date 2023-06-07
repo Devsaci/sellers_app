@@ -15,7 +15,9 @@ class _ItemsScreenState extends State<ItemsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        flexibleSpace: Container(),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(),
+        ),
       ),
     );
   }
