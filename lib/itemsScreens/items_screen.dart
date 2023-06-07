@@ -47,9 +47,13 @@ class _ItemsScreenState extends State<ItemsScreen> {
           ),
         ],
       ),
-      body:  CustomScrollView(
+      body: CustomScrollView(
         slivers: [
-          SliverPersistentHeader(delegate: TextDelegateHeaderWidget()),
+          SliverPersistentHeader(
+            delegate: TextDelegateHeaderWidget(
+              title: "My " + widget.model!.brandTitle.toString(),
+            ),
+          ),
         ],
       ),
     );
