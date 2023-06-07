@@ -16,7 +16,19 @@ class _ItemsScreenState extends State<ItemsScreen> {
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: Container(
-          decoration: BoxDecoration(),
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors:
+                [
+                  Colors.amber.shade300,
+                  Colors.amber.shade800,
+                ],
+                begin: const FractionalOffset(0.0, 0.0),
+                end: const FractionalOffset(1.0, 0.0),
+                stops: const [0.0, 1.0],
+                tileMode: TileMode.clamp,
+              )
+          ),
         ),
       ),
     );
