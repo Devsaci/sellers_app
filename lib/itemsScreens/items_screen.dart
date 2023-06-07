@@ -51,7 +51,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
         slivers: [
           SliverPersistentHeader(
             delegate: TextDelegateHeaderWidget(
-              title:  "My " + widget.model!.brandTitle.toString() + "'s Items",
+              title:  "My ${widget.model!.brandTitle}'s Items",
             ),
           ),
         ],
