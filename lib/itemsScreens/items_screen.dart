@@ -37,6 +37,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
             fontWeight: FontWeight.bold,
           ),
         ),
+        centerTitle: true,
       ),
     );
   }
