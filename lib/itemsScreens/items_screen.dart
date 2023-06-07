@@ -39,10 +39,11 @@ class _ItemsScreenState extends State<ItemsScreen> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.add_box_rounded),
-          )
+            icon: const Icon(Icons.add_box_rounded, color: Colors.white,),
+          ),
         ],
       ),
+      body: const CustomScrollView(slivers: [],),
     );
   }
 }
