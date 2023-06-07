@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sellers_app/models/brands.dart';
+import 'package:sellers_app/widgets/TextDelegateHeaderWidget.dart';
 
 class ItemsScreen extends StatefulWidget {
   final Brands? model;
@@ -39,11 +40,18 @@ class _ItemsScreenState extends State<ItemsScreen> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.add_box_rounded, color: Colors.white,),
+            icon: const Icon(
+              Icons.add_box_rounded,
+              color: Colors.white,
+            ),
           ),
         ],
       ),
-      body: const CustomScrollView(slivers: [],),
+      body:  CustomScrollView(
+        slivers: [
+          SliverPersistentHeader(delegate: TextDelegateHeaderWidget()),
+        ],
+      ),
     );
   }
 }
