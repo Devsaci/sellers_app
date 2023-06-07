@@ -18,17 +18,15 @@ class _ItemsScreenState extends State<ItemsScreen> {
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors:
-                [
-                  Colors.amber.shade300,
-                  Colors.amber.shade800,
-                ],
-                begin: const FractionalOffset(0.0, 0.0),
-                end: const FractionalOffset(1.0, 0.0),
-                stops: const [0.0, 1.0],
-                tileMode: TileMode.clamp,
-              )
-          ),
+            colors: [
+              Colors.amber.shade300,
+              Colors.amber.shade800,
+            ],
+            begin: const FractionalOffset(0.0, 0.0),
+            end: const FractionalOffset(1.0, 0.0),
+            stops: const [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          )),
         ),
         title: const Text(
           "iShop",
@@ -38,7 +36,12 @@ class _ItemsScreenState extends State<ItemsScreen> {
           ),
         ),
         centerTitle: true,
-        actions: [],
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.add_box_rounded),
+          )
+        ],
       ),
     );
   }
