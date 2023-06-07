@@ -30,6 +30,13 @@ class _ItemsScreenState extends State<ItemsScreen> {
               )
           ),
         ),
+        title: const Text(
+          "iShop",
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
     );
   }
