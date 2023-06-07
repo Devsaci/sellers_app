@@ -38,6 +38,7 @@ class _ItemsScreenState extends State<ItemsScreen> {
           ),
         ),
         centerTitle: true,
+        actions: [],
       ),
     );
   }
