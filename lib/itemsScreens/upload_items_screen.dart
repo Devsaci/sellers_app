@@ -22,6 +22,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
   TextEditingController itemInfoTextEditingController = TextEditingController();
   TextEditingController itemTitleTextEditingController = TextEditingController();
   TextEditingController itemDescriptionTextEditingController = TextEditingController();
+  TextEditingController itemPriceTextEditingController = TextEditingController();
 
   XFile? imgXFile;
   final ImagePicker imagePicker = ImagePicker();
@@ -211,6 +212,30 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
                     border: InputBorder.none),
               ),
             ),
+          ),
+          const Divider(
+            color: Colors.pinkAccent,
+            thickness: 3,
+          ),
+          //Item Price
+          ListTile(
+            leading: const Icon(
+              Icons.title,
+              color: Colors.deepPurple,
+            ),
+            title: SizedBox(
+              child: TextField(
+                controller: itemPriceTextEditingController,
+                decoration: const InputDecoration(
+                    hintText: "Item Price",
+                    hintStyle: TextStyle(color: Colors.grey),
+                    border: InputBorder.none),
+              ),
+            ),
+          ),
+          const Divider(
+            color: Colors.pinkAccent,
+            thickness: 3,
           ),
         ],
       ),
