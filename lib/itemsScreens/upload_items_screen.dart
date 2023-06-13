@@ -254,7 +254,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
                     backgroundColor: Colors.deepPurple,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30))),
-                child: const Text("Add New Brand"),
+                child: const Text("Add New Item"),
               ),
             ],
           ),
