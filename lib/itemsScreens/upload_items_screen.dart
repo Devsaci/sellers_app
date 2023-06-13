@@ -196,6 +196,22 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
             color: Colors.pinkAccent,
             thickness: 3,
           ),
+          //Item Description
+          ListTile(
+            leading: const Icon(
+              Icons.title,
+              color: Colors.deepPurple,
+            ),
+            title: SizedBox(
+              child: TextField(
+                controller: itemDescriptionTextEditingController,
+                decoration: const InputDecoration(
+                    hintText: "Item Description",
+                    hintStyle: TextStyle(color: Colors.grey),
+                    border: InputBorder.none),
+              ),
+            ),
+          ),
         ],
       ),
     );
