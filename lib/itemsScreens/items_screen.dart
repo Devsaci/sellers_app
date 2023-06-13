@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sellers_app/itemsScreens/upload_items_screen.dart';
 import 'package:sellers_app/models/brands.dart';
 import 'package:sellers_app/widgets/TextDelegateHeaderWidget.dart';
 
@@ -39,7 +40,10 @@ class _ItemsScreenState extends State<ItemsScreen> {
         centerTitle: true,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: ()
+            {
+              Navigator.push(context, MaterialPageRoute(builder: (c)=> const UploadItemsScreen()));
+            },
             icon: const Icon(
               Icons.add_box_rounded,
               color: Colors.white,
