@@ -11,8 +11,6 @@ import '../global/global.dart';
 import '../splashScreen/my_splash_screen.dart';
 import 'package:firebase_storage/firebase_storage.dart' as fStorage;
 
-
-
 class UploadItemsScreen extends StatefulWidget {
   const UploadItemsScreen({Key? key}) : super(key: key);
 
@@ -21,10 +19,9 @@ class UploadItemsScreen extends StatefulWidget {
 }
 
 class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
-  TextEditingController brandInfoTextEditingController =
-  TextEditingController();
+  TextEditingController itemInfoTextEditingController = TextEditingController();
   TextEditingController brandTitleTextEditingController =
-  TextEditingController();
+      TextEditingController();
 
   XFile? imgXFile;
   final ImagePicker imagePicker = ImagePicker();
@@ -42,7 +39,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
         .set({
       "brandID": brandUniqueId,
       "sellerUID": sharedPreferences!.getString("uid"),
-      "brandInfo": brandInfoTextEditingController.text.trim(),
+      "brandInfo": itemInfoTextEditingController.text.trim(),
       "brandTitle": brandTitleTextEditingController.text.trim(),
       "publishedDate": DateTime.now(),
       "status": "available",
@@ -52,12 +49,13 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
       uploading = false;
       brandUniqueId = DateTime.now().millisecondsSinceEpoch.toString();
     });
-    Navigator.push(context, MaterialPageRoute(builder: (c)=> const HomeScreen()));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (c) => const HomeScreen()));
   }
 
   Future<void> validateUploadForm() async {
     if (imgXFile != null) {
-      if (brandInfoTextEditingController.text.isNotEmpty &&
+      if (itemInfoTextEditingController.text.isNotEmpty &&
           brandTitleTextEditingController.text.isNotEmpty) {
         setState(() {
           uploading = true;
@@ -69,9 +67,9 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
             .child("sellersBrandsImages")
             .child(fileName);
         fStorage.UploadTask uploadImageTask =
-        storageRef.putFile(File(imgXFile!.path));
+            storageRef.putFile(File(imgXFile!.path));
         fStorage.TaskSnapshot taskSnapshot =
-        await uploadImageTask.whenComplete(() {});
+            await uploadImageTask.whenComplete(() {});
         await taskSnapshot.ref.getDownloadURL().then((urlImage) {
           downloadUrlImage = urlImage;
         });
@@ -99,17 +97,17 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
         ),
         flexibleSpace: Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Colors.deepPurpleAccent.shade200,
-                  Colors.amber.shade900,
-                ],
-                begin: const FractionalOffset(0.0, 0.0),
-                end: const FractionalOffset(1.0, 0.0),
-                stops: const [0.0, 1.0],
-                tileMode: TileMode.clamp,
-              ),
-            )),
+          gradient: LinearGradient(
+            colors: [
+              Colors.deepPurpleAccent.shade200,
+              Colors.amber.shade900,
+            ],
+            begin: const FractionalOffset(0.0, 0.0),
+            end: const FractionalOffset(1.0, 0.0),
+            stops: const [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        )),
         title: const Text("Upload New Items"),
         centerTitle: true,
         actions: [
@@ -131,8 +129,8 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
           uploading == true
               ? linearProgressBar()
               : Container(
-            color: Colors.deepOrange,
-          ),
+                  color: Colors.deepOrange,
+                ),
           const SizedBox(
             height: 14,
           ),
@@ -166,7 +164,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
             ),
             title: SizedBox(
               child: TextField(
-                controller: brandInfoTextEditingController,
+                controller: itemInfoTextEditingController,
                 decoration: const InputDecoration(
                     hintText: "Brand Info",
                     hintStyle: TextStyle(color: Colors.grey),
@@ -213,17 +211,17 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
       appBar: AppBar(
         flexibleSpace: Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Colors.deepPurpleAccent.shade200,
-                  Colors.amber.shade900,
-                ],
-                begin: const FractionalOffset(0.0, 0.0),
-                end: const FractionalOffset(1.0, 0.0),
-                stops: const [0.0, 1.0],
-                tileMode: TileMode.clamp,
-              ),
-            )),
+          gradient: LinearGradient(
+            colors: [
+              Colors.deepPurpleAccent.shade200,
+              Colors.amber.shade900,
+            ],
+            begin: const FractionalOffset(0.0, 0.0),
+            end: const FractionalOffset(1.0, 0.0),
+            stops: const [0.0, 1.0],
+            tileMode: TileMode.clamp,
+          ),
+        )),
         title: const Text("Add New Brand"),
         centerTitle: true,
       ),
@@ -244,8 +242,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(
-                  Icons.add_photo_alternate,
+              const Icon(Icons.add_photo_alternate,
                   color: Colors.white, size: 200),
               ElevatedButton(
                 onPressed: () {
