@@ -176,7 +176,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
             color: Colors.pinkAccent,
             thickness: 3,
           ),
-          //brand title
+          //Item title
           ListTile(
             leading: const Icon(
               Icons.title,
@@ -186,7 +186,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
               child: TextField(
                 controller: itemTitleTextEditingController,
                 decoration: const InputDecoration(
-                    hintText: "brand title",
+                    hintText: "Item title",
                     hintStyle: TextStyle(color: Colors.grey),
                     border: InputBorder.none),
               ),
