@@ -22,6 +22,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
   TextEditingController itemInfoTextEditingController = TextEditingController();
   TextEditingController brandTitleTextEditingController =
       TextEditingController();
+  TextEditingController itemTitleTextEditingController = TextEditingController();
 
   XFile? imgXFile;
   final ImagePicker imagePicker = ImagePicker();
@@ -40,7 +41,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
       "brandID": brandUniqueId,
       "sellerUID": sharedPreferences!.getString("uid"),
       "brandInfo": itemInfoTextEditingController.text.trim(),
-      "brandTitle": brandTitleTextEditingController.text.trim(),
+      "brandTitle": itemTitleTextEditingController.text.trim(),
       "publishedDate": DateTime.now(),
       "status": "available",
       "thumbnailUrl": downloadUrlImage,
@@ -56,7 +57,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
   Future<void> validateUploadForm() async {
     if (imgXFile != null) {
       if (itemInfoTextEditingController.text.isNotEmpty &&
-          brandTitleTextEditingController.text.isNotEmpty) {
+          itemTitleTextEditingController.text.isNotEmpty) {
         setState(() {
           uploading = true;
         });
@@ -184,7 +185,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
             ),
             title: SizedBox(
               child: TextField(
-                controller: brandTitleTextEditingController,
+                controller: itemTitleTextEditingController,
                 decoration: const InputDecoration(
                     hintText: "brand title",
                     hintStyle: TextStyle(color: Colors.grey),
