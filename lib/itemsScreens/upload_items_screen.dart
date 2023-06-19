@@ -20,9 +20,12 @@ class UploadItemsScreen extends StatefulWidget {
 
 class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
   TextEditingController itemInfoTextEditingController = TextEditingController();
-  TextEditingController itemTitleTextEditingController = TextEditingController();
-  TextEditingController itemDescriptionTextEditingController = TextEditingController();
-  TextEditingController itemPriceTextEditingController = TextEditingController();
+  TextEditingController itemTitleTextEditingController =
+      TextEditingController();
+  TextEditingController itemDescriptionTextEditingController =
+      TextEditingController();
+  TextEditingController itemPriceTextEditingController =
+      TextEditingController();
 
   XFile? imgXFile;
   final ImagePicker imagePicker = ImagePicker();
@@ -57,7 +60,8 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
   Future<void> validateUploadForm() async {
     if (imgXFile != null) {
       if (itemInfoTextEditingController.text.isNotEmpty &&
-          itemTitleTextEditingController.text.isNotEmpty) {
+          itemTitleTextEditingController.text.isNotEmpty  &&
+          itemDescriptionTextEditingController.text.isNotEmpty) {
         setState(() {
           uploading = true;
         });
@@ -132,9 +136,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
               : Container(
                   color: Colors.deepOrange,
                 ),
-          const SizedBox(
-            height: 14,
-          ),
+          const SizedBox(height: 14),
           //image
           SizedBox(
             height: 230,
@@ -247,7 +249,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
     return imgXFile == null ? defaultScreen() : uploadFormScreen();
   }
 
-  Scaffold defaultScreen() {
+  defaultScreen() {
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: Container(
