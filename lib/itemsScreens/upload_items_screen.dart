@@ -70,7 +70,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
         String fileName = DateTime.now().millisecondsSinceEpoch.toString();
         fStorage.Reference storageRef = fStorage.FirebaseStorage.instance
             .ref()
-            .child("sellersBrandsImages")
+            .child("sellersItemsImages")
             .child(fileName);
         fStorage.UploadTask uploadImageTask =
             storageRef.putFile(File(imgXFile!.path));
