@@ -60,8 +60,9 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
   Future<void> validateUploadForm() async {
     if (imgXFile != null) {
       if (itemInfoTextEditingController.text.isNotEmpty &&
-          itemTitleTextEditingController.text.isNotEmpty  &&
-          itemDescriptionTextEditingController.text.isNotEmpty) {
+          itemTitleTextEditingController.text.isNotEmpty &&
+          itemDescriptionTextEditingController.text.isNotEmpty &&
+          itemPriceTextEditingController.text.isNotEmpty) {
         setState(() {
           uploading = true;
         });
