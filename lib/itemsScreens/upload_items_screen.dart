@@ -57,7 +57,9 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
       "publishedDate": DateTime.now(),
       "status": "available",
       "thumbnailUrl": downloadUrlImage,
-    }).then((value) => null);
+    }).then((value) {
+      return null;
+    });
     setState(() {
       uploading = false;
       itemUniqueId = DateTime.now().millisecondsSinceEpoch.toString();
