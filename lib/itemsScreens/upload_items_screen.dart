@@ -46,6 +46,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
         .collection("items")
         .doc(itemUniqueId)
         .set({
+      "itemID": itemUniqueId,
       "brandID": itemUniqueId,
       "sellerUID": sharedPreferences!.getString("uid"),
       "brandInfo": itemInfoTextEditingController.text.trim(),
