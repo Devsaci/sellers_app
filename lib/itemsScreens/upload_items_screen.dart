@@ -57,8 +57,25 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
       "publishedDate": DateTime.now(),
       "status": "available",
       "thumbnailUrl": downloadUrlImage,
-    }).then((value) {
-      return null;
+    }).then((value)
+    {
+      FirebaseFirestore.instance
+          .collection("items")
+          .doc(itemUniqueId)
+          .set(
+          {
+            "itemID": itemUniqueId,
+            "brandID": widget.model!.brandID.toString(),
+            "sellerUID": sharedPreferences!.getString("uid"),
+            "sellerName": sharedPreferences!.getString("name"),
+            "itemInfo": itemInfoTextEditingController.text.trim(),
+            "itemTitle": itemTitleTextEditingController.text.trim(),
+            "longDescription": itemInfoTextEditingController.text.trim(),
+            "price": itemTitleTextEditingController.text.trim(),
+            "publishedDate": DateTime.now(),
+            "status": "available",
+            "thumbnailUrl": downloadUrlImage,
+          });
     });
     setState(() {
       uploading = false;
