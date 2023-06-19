@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:sellers_app/models/brands.dart';
 import 'package:sellers_app/widgets/progress_bar.dart';
 
 import '../brandsScreens/home_screen.dart';
@@ -12,7 +13,9 @@ import '../splashScreen/my_splash_screen.dart';
 import 'package:firebase_storage/firebase_storage.dart' as fStorage;
 
 class UploadItemsScreen extends StatefulWidget {
-  const UploadItemsScreen({Key? key}) : super(key: key);
+  Brands? model;
+
+  UploadItemsScreen({super.key, this.model});
 
   @override
   State<UploadItemsScreen> createState() => _UploadBrandsScreenStateState();
@@ -39,6 +42,8 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
         .collection("sellers")
         .doc(sharedPreferences!.getString("uid"))
         .collection("brands")
+        .doc(widget.model!.brandID)
+        .collection("items")
         .doc(brandUniqueId)
         .set({
       "brandID": brandUniqueId,

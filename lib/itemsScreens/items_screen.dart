@@ -4,9 +4,9 @@ import 'package:sellers_app/models/brands.dart';
 import 'package:sellers_app/widgets/TextDelegateHeaderWidget.dart';
 
 class ItemsScreen extends StatefulWidget {
-  final Brands? model;
+  Brands? model;
 
-  const ItemsScreen({Key? key, this.model}) : super(key: key);
+  ItemsScreen({super.key, this.model,});
 
   @override
   State<ItemsScreen> createState() => _ItemsScreenState();
@@ -42,7 +42,9 @@ class _ItemsScreenState extends State<ItemsScreen> {
           IconButton(
             onPressed: ()
             {
-              Navigator.push(context, MaterialPageRoute(builder: (c)=> const UploadItemsScreen()));
+              Navigator.push(context, MaterialPageRoute(builder: (c)=>  UploadItemsScreen(
+                model: widget.model,
+              )));
             },
             icon: const Icon(
               Icons.add_box_rounded,
