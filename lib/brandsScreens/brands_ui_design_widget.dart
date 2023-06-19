@@ -63,7 +63,7 @@ class _BrandsUiDesignWidgetState extends State<BrandsUiDesignWidget> {
                         child: Icon(
                           Icons.delete_sweep,
                           color: Colors.pinkAccent,
-                          size: 50,
+                          size:30,
                         ),
                       ),
                     )
