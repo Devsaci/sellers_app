@@ -4,9 +4,9 @@ import 'package:sellers_app/models/brands.dart';
 import 'package:sellers_app/widgets/TextDelegateHeaderWidget.dart';
 
 class ItemsScreen extends StatefulWidget {
-  Brands? model;
+  final Brands? model;
 
-  ItemsScreen({super.key, this.model,});
+  const ItemsScreen({super.key, this.model,});
 
   @override
   State<ItemsScreen> createState() => _ItemsScreenState();
