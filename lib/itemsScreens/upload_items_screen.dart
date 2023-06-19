@@ -52,6 +52,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
       "sellerName": sharedPreferences!.getString("name"),
       "itemInfo": itemInfoTextEditingController.text.trim(),
       "itemTitle": itemTitleTextEditingController.text.trim(),
+      "longDescription": itemInfoTextEditingController.text.trim(),
       "publishedDate": DateTime.now(),
       "status": "available",
       "thumbnailUrl": downloadUrlImage,
