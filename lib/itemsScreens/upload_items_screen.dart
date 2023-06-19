@@ -35,7 +35,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
 
   bool uploading = false;
   String downloadUrlImage = "";
-  String brandUniqueId = DateTime.now().millisecondsSinceEpoch.toString();
+  String itemUniqueId = DateTime.now().millisecondsSinceEpoch.toString();
 
   void saveBrandInfo() {
     FirebaseFirestore.instance
@@ -44,9 +44,9 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
         .collection("brands")
         .doc(widget.model!.brandID)
         .collection("items")
-        .doc(brandUniqueId)
+        .doc(itemUniqueId)
         .set({
-      "brandID": brandUniqueId,
+      "brandID": itemUniqueId,
       "sellerUID": sharedPreferences!.getString("uid"),
       "brandInfo": itemInfoTextEditingController.text.trim(),
       "brandTitle": itemTitleTextEditingController.text.trim(),
@@ -56,7 +56,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
     });
     setState(() {
       uploading = false;
-      brandUniqueId = DateTime.now().millisecondsSinceEpoch.toString();
+      itemUniqueId = DateTime.now().millisecondsSinceEpoch.toString();
     });
     Navigator.push(
         context, MaterialPageRoute(builder: (c) => const HomeScreen()));
