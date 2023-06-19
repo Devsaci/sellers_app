@@ -47,7 +47,7 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
         .doc(itemUniqueId)
         .set({
       "itemID": itemUniqueId,
-      "brandID": itemUniqueId,
+      "brandID": widget.model!.brandID.toString(),
       "sellerUID": sharedPreferences!.getString("uid"),
       "brandInfo": itemInfoTextEditingController.text.trim(),
       "brandTitle": itemTitleTextEditingController.text.trim(),
