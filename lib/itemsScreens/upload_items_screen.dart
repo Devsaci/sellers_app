@@ -13,9 +13,9 @@ import '../splashScreen/my_splash_screen.dart';
 import 'package:firebase_storage/firebase_storage.dart' as fStorage;
 
 class UploadItemsScreen extends StatefulWidget {
-  Brands? model;
+  final  Brands? model;
 
-  UploadItemsScreen({super.key, this.model});
+  const UploadItemsScreen({super.key, this.model});
 
   @override
   State<UploadItemsScreen> createState() => _UploadBrandsScreenStateState();
