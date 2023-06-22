@@ -13,7 +13,7 @@ import '../splashScreen/my_splash_screen.dart';
 import 'package:firebase_storage/firebase_storage.dart' as fStorage;
 
 class UploadItemsScreen extends StatefulWidget {
-  final  Brands? model;
+  final Brands? model;
 
   const UploadItemsScreen({super.key, this.model});
 
@@ -57,29 +57,24 @@ class _UploadBrandsScreenStateState extends State<UploadItemsScreen> {
       "publishedDate": DateTime.now(),
       "status": "available",
       "thumbnailUrl": downloadUrlImage,
-    }).then((value)
-    {
-      FirebaseFirestore.instance
-          .collection("items")
-          .doc(itemUniqueId)
-          .set(
-          {
-            "itemID": itemUniqueId,
-            "brandID": widget.model!.brandID.toString(),
-            "sellerUID": sharedPreferences!.getString("uid"),
-            "sellerName": sharedPreferences!.getString("name"),
-            "itemInfo": itemInfoTextEditingController.text.trim(),
-            "itemTitle": itemTitleTextEditingController.text.trim(),
-            "longDescription": itemInfoTextEditingController.text.trim(),
-            "price": itemTitleTextEditingController.text.trim(),
-            "publishedDate": DateTime.now(),
-            "status": "available",
-            "thumbnailUrl": downloadUrlImage,
-          });
+    }).then((value) {
+      FirebaseFirestore.instance.collection("items").doc(itemUniqueId).set({
+        "itemID": itemUniqueId,
+        "brandID": widget.model!.brandID.toString(),
+        "sellerUID": sharedPreferences!.getString("uid"),
+        "sellerName": sharedPreferences!.getString("name"),
+        "itemInfo": itemInfoTextEditingController.text.trim(),
+        "itemTitle": itemTitleTextEditingController.text.trim(),
+        "longDescription": itemInfoTextEditingController.text.trim(),
+        "price": itemTitleTextEditingController.text.trim(),
+        "publishedDate": DateTime.now(),
+        "status": "available",
+        "thumbnailUrl": downloadUrlImage,
+      });
     });
     setState(() {
       uploading = false;
-      itemUniqueId = DateTime.now().millisecondsSinceEpoch.toString();
+      //itemUniqueId = DateTime.now().millisecondsSinceEpoch.toString();
     });
     Navigator.push(
         context, MaterialPageRoute(builder: (c) => const HomeScreen()));
