@@ -69,3 +69,7 @@ Course content
 12min
 # 44. allow seller to add new items to selected brand
 33min
+
+# section 11 : Sellers App - Retrieve and Display Items
+# 46. Items Model CLass
+6min
